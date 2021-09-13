@@ -12,7 +12,11 @@ namespace Module5Lab
             int total = 0;
             double mean = 0;
             double median = 0;
-
+            int past = 0;
+            int least = 0;
+            int curr = 0;
+            int most = 0;
+            int j = 0;
             for (int i = 0; i < days.Length; i++)
             {
                 Console.Write($"Enter sightings on {days[i]}: ");
@@ -21,7 +25,15 @@ namespace Module5Lab
 
             for (int i = 0; i < days.Length; i++)
             {
+                
                 Console.WriteLine($"{days[i]}:  {sightings[i]}");
+
+                if (i = 0)
+                {
+                    curr = sightings[i];
+                    
+                }
+                
                 total += sightings[i];
             }
 

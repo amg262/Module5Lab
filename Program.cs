@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Linq;
 
 namespace Module5Lab
 {
     class Program
     {
-
         static void TrackUFO()
         {
             string[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
@@ -25,27 +25,17 @@ namespace Module5Lab
 
             for (int i = 0; i < days.Length; i++)
             {
-                
                 Console.WriteLine($"{days[i]}:  {sightings[i]}");
-
-                if (i = 0)
-                {
-                    curr = sightings[i];
-                    
-                }
-                
-                total += sightings[i];
             }
 
-            mean = total / sightings.Length;
-            median = total / 2;
-
-            Console.WriteLine($"\nTotal:  {total:F}");
-            Console.WriteLine($"Mean:  {mean:F}");
-            Console.WriteLine($"Median:  {median:F}");
-
+            Console.WriteLine($"\nTotal:  {sightings.Sum()}");
+            Console.WriteLine($"Mean:  {sightings.Sum() / (double) sightings.Length}");
+            Console.WriteLine($"Median:  {(double) sightings.Sum() / 2}");
+            Console.WriteLine($"Lowest:  {sightings.Min()}");
+            Console.WriteLine($"Highest:  {sightings.Max()}");
+            Console.WriteLine($"Range:  {sightings.Max() - sightings.Min()}");
         }
-        
+
         static void Main(string[] args)
         {
             TrackUFO();
